@@ -13,23 +13,19 @@ ul {
     list-style-image: url("images/li.png");
 }
 
-/* unvisited link */
 a:link {
-    color: red;
+    color: hotpink;
 }
 
-/* visited link */
 a:visited {
     color: green;
 }
 
-/* mouse over link */
 a:hover {
-    color: hotpink;
+    color: red;
     padding-left: 10px;
 }
 
-/* selected link */
 a:active {
     color: blue;
 }
