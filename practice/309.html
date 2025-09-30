@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>309 - Trương Nguyệt Hà</title>
+        <style type="text/css">
+            .card img
+            {
+                width: 50px;
+                height: 100px;
+                object-fit: cover;
+            }
+            .front, .back
+            {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+            .front
+            { 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .back
+            {
+                transform: rotateY(180deg);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="front">
+                <img src="images/trước.jpg"/>
+            </div>
+            <div class="back">
+                <img src="images/sau.jpg"/>
+            </div>
+        </div>
+    </body>
+</html>
