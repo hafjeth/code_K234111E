@@ -20,7 +20,11 @@
     color: #ffffff;
 }
 
-#customers tr.alt td{
-    Color: black;
-    background-color: white;
-} 
+#customers tr:nth-child(even) {
+    background-color: #ffffff; 
+    color: black;
+}
+
+#customers tr:nth-child(odd) {
+    background-color: #EAF2D3; 
+}
