@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <title>Ex48 - Trương Nguyệt Hà</title>
+        <style>
+            body {
+                background-color: #99CCFF;
+                font-family: Arial, sans-serif;
+            }
+            .container {
+                width: 700px;
+                margin: auto;
+                padding: 20px;
+                background-color: #99CCFF;
+            }
+            .header {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            .header img {
+                display: block;
+                margin: auto;
+            }
+            h2 {
+                margin: 10px 0;
+            }
+            table {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 6px;
+            }
+            td {
+                padding: 4px;
+                vertical-align: top;
+            }
+            input[type="text"], select, textarea {
+                padding: 4px;
+                font-size: 14px;
+            }
+            textarea {
+                width: 90%;
+                height: 80px;
+            }
+            .buttons {
+                text-align: center;
+                margin-top: 15px;
+            }
+            .buttons input {
+                margin: 0 5px;
+                padding: 6px 15px;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="container">
+        <div class="header">
+            <img src="images/Jackson.gif" alt="Jackson Electronics Logo">
+            <h2>Registration Form</h2>
+            <p>Register your Jackson Electronics product here</p>
+        </div>
+
+        <form>
+            <table>
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" name="firstname" id="firstname"></td>
+                    <td>Last Name:</td>
+                    <td><input type="text" name="lastname" id="lastname"></td>
+                </tr>
+                <tr>
+                    <td>Address #1:</td>
+                    <td colspan="3"><input type="text" name="address1" id="address1" size="50"></td>
+                </tr>
+                <tr>
+                    <td>Address #2:</td>
+                    <td colspan="3"><input type="text" name="address2" id="address2" size="50"></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td><input type="text" name="city" id="city"></td>
+                    <td>State:</td>
+                    <td><input type="text" name="state" id="state" size="5">
+                        &nbsp;Zip: <input type="text" name="zip" id="zip" size="7"></td>
+                </tr>
+                <tr>
+                    <td>Country:</td>
+                    <td colspan="3"><input type="text" name="country" id="country" value="United States"></td>
+                </tr>
+            </table>
+
+            <hr>
+
+            <table>
+                <tr>
+                    <td>Product:</td>
+                    <td colspan="3">
+                        <select name="product" id="product">
+                            <option>ScanMaster</option>
+                            <option>Printer</option>
+                            <option>Monitor</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date Purchased:</td>
+                    <td colspan="3"><input type="text" name="date" id="date"></td>
+                </tr>
+                <tr>
+                    <td>Serial #:</td>
+                    <td colspan="3"><input type="text" name="serial" id="serial"></td>
+                </tr>
+                <tr>
+                    <td>Used for:</td>
+                    <td colspan="3">
+                        <input type="radio" name="usedfor" id="home" value="home">Home
+                        <input type="radio" name="usedfor" id="business" value="business">Business
+                        <input type="radio" name="usedfor" id="government" value="government">Government
+                        <input type="radio" name="usedfor" id="education" value="education">Educational Institution
+                        <input type="radio" name="usedfor" id="other" value="other">Other
+                    </td>
+                </tr>
+                <tr>
+                    <td>System:</td>
+                    <td colspan="3">
+                        <input type="checkbox" name="system" id="windows" value="windows">Windows
+                        <input type="checkbox" name="system" id="macintosh" value="macintosh">Macintosh
+                        <input type="checkbox" name="system" id="unix" value="unix">UNIX
+                        <input type="checkbox" name="system" id="other_system" value="other">Other
+                    </td>
+                </tr>
+            </table>
+
+            <hr>
+            <table>
+                <tr>
+                    <td>Comments?:</td>
+                    <td colspan="3"><textarea name="comments" id="comments"></textarea></td>
+                </tr>
+            </table>
+
+            <div class="buttons">
+                <input type="submit" value="Click to register">
+                <input type="reset" value="Click to cancel">
+            </div>
+        </form>
+    </div>
+    </body>
+</html>

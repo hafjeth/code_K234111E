@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <title>Ex49 - Trương Nguyệt Hà</title>
+        <style>
+            body {
+                background-color: #E0FFFF;
+                font-family: Arial, sans-serif;
+            }
+
+            .container {
+                width: 700px;
+                margin: auto;
+                padding: 20px;
+            }
+
+            h2 {
+                color: red;
+                margin-top: 0;
+            }
+
+            hr {
+                border: 1px solid gray;
+            }
+
+            .section {
+                margin: 15px 0;
+            }
+
+            .section-title {
+                font-weight: bold;
+            }
+
+            input[type="text"] {
+                padding: 5px;
+                font-size: 14px;
+            }
+
+            .keywords {
+                width: 95%;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+            td {
+                padding: 4px 20px 4px 0;
+            }
+
+            .buttons {
+                margin-top: 20px;
+            }
+
+            .buttons input {
+                border: none;
+                background: none;
+                cursor: pointer;
+                margin-right: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Online Classifieds Search Form</h2>
+            <hr>
+            <form>
+
+                <div class="section">
+                    <span class="section-title">1) Search for a classified in the following sections:</span><br>
+                    <table>
+                        <tr>
+                            <td><input type="radio" name="section" value="employment"> Employment</td>
+                            <td><input type="radio" name="section" value="personal"> Personal</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="section" value="forsale"> For Sale</td>
+                            <td><input type="radio" name="section" value="misc"> Miscellaneous</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="section" value="housing"> Housing</td>
+                            <td><input type="radio" name="section" value="all"> All of the above</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="section">
+                    <span class="section-title">2) Search the following publications:</span><br>
+                    <table>
+                        <tr>
+                            <td><input type="checkbox" name="pub" value="midwest"> Midwest Times</td>
+                            <td><input type="checkbox" name="pub" value="modern"> Modern News</td>
+                            <td><input type="checkbox" name="pub" value="employmenttoday"> Employment Today</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="pub" value="greatlakes"> Great Lakes Classifieds</td>
+                            <td><input type="checkbox" name="pub" value="middleton"> Middleton Daily</td>
+                            <td><input type="checkbox" name="pub" value="cashtown"> Cashtown Daily News</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="section">
+                    <span class="section-title">3) From to </span>
+                    <input type="text" name="fromdate" placeholder="mm/dd/yy">
+                    to
+                    <input type="text" name="todate" placeholder="mm/dd/yy">
+                </div>
+
+                <div class="section">
+                    <span class="section-title">4) Enter a few keywords to describe the classified.</span><br>
+                    <input type="text" name="keywords" class="keywords">
+                </div>
+
+                <div class="section">
+                    <span class="section-title">5) Click one of the options below:</span><br>
+                    <div class="buttons">
+                        <input type="image" src="images/Search.gif" alt="Search" width="50" height="40" name="search">
+                        <input type="image" src="images/Help.gif" alt="Help" width="50" height="40" name="help">
+                        <input type="image" src="images/Cancel.gif" alt="Cancel" width="50" height="40" name="cancel">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </body>
+</html>
