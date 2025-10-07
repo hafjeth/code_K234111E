@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <title>Ex51 - Trương Nguyệt Hà</title>
+        <script>
+            function register()
+            {
+                date = frm_regis.date.value
+                inf_first = frm_regis.inf_first.value
+                inf_last = frm_regis.inf_last.value
+                medical_record = frm_regis.medical_record.value
+                date_birth = frm_regis.date_birth.value
+                birth_weight = frm_regis.birth_weight.value
+                score = frm_regis.score.value
+                mom_first = frm_regis.mom_first.value
+                mom_last = frm_regis.mom_last.value
+                dad_first = frm_regis.dad_first.value
+                dad_last = frm_regis.dad_last.value
+                physician = frm_regis.physician.value
+            }
+        </script>
+    </head>
+    <body style="background-color: teal; color: white; text-align: center;">
+        <h1><img src="Logo.gif"/></h1>
+        <h1>Newborn Registrasion</h1>
+        <form name="frm_regis">
+            <table style="margin: auto;">
+                <tr>
+                    <td>Date:</td>
+                    <td colspan="3">
+                        <input type="text" name="date" id="date" placeholder="mm/dd/yy"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1) Infrant's first name:</td>
+                    <td>
+                        <input type="text" name="name" id="inf_first"/>
+                    </td>
+                    <td>Last:</td>
+                    <td>
+                        <input type="text" name="name" id="inf_last"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2) Medical Record #:</td>
+                    <td colspan="3">
+                        <input type="text" name="medical_record" id="medical_record"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3) Date of birth:</td>
+                    <td colspan="3">
+                        <input type="text" name="date_birth" id="date_birth" placeholder="mm/dd/yy"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4) Birth weight:</td>
+                    <td colspan="3">
+                        <input type="text" name="birth_weight" id="birth_weight"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5) APGAR score:</td>
+                    <td colspan="3">
+                        <input type="text" name="score" id="score"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6) Mother's first name:</td>
+                    <td>
+                        <input type="text" name="name" id="mom_first"/>
+                    </td>
+                    <td>Last:</td>
+                    <td>
+                        <input type="text" name="name" id="mom_last"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7) Father's first name:</td>
+                    <td>
+                        <input type="text" name="name" id="dad_first"/>
+                    </td>
+                    <td>Last:</td>
+                    <td>
+                        <input type="text" name="name" id="dad_last"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8) Physician (check all that apply)</td>
+                    <td colspan="3">
+                        <select name="physician" id="physician">
+                            <option>Dr. Warren Albert</option>
+                            <option>Dr. Maria Alvarez</option>
+                            <option>Dr. Karen Brinkman</option>
+                            <option>Dr. Micheal Kerry</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td colspan="4">
+                        <button type="button" onclick="register()">Register</button>
+                        <button type="reset">Cancel</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

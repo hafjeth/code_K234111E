@@ -1,0 +1,167 @@
+<html>
+    <head>
+        <title>Ex50 - Trương Nguyệt Hà</title>
+        <script>
+            function submit_expense()
+            {
+                fname=frm_report.first_name.value
+                lname=frm_report.last_name.value
+                ssn=frm_report.ssn.value
+                depte=frm_report.department.value
+                purpose=frm_report.purpose.value
+                alert("Báo cáo đã gửi thành công!")
+            }
+        </script>
+    </head>
+    <body style="background-color: aliceblue; text-align: center;">
+        <h1><img src="DeLong.jpg"/></h1>
+        <h2>Travel Expense Report</h2>
+        <hr/>
+        <form name="frm_report">
+            <table style="margin: auto;">
+                <tr>
+                    <td>1) First Name:</td>
+                    <td>
+                        <input type="text" name="first_name" id="first_name"/>
+                    </td>
+                    <td>Last Name:</td>
+                    <td>
+                        <input type="text" name="last_name" id="last_name"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2) Social Security Number:</td>
+                    <td colspan="3">
+                        <input type="text" name="ssn" id="ssn"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3) Department:</td>
+                    <td colspan="3">
+                        <select name="department">
+                            <option>Accounting</option>
+                            <option>Marketing</option>
+                            <option>HR</option>
+                            <option>Sales</option>
+                            <option>IT</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        4) Describe the purpose of your trip:
+                        <br/>
+                        <textarea name="purpose" rows="4" cols="60"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        5) Itemize your travel expenses:
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <table border="1">
+                            <tr>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>Category</th>
+                                <th>Amount</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" name="date" placeholder="mm/dd/yy" id="date1"/>
+                                </td>
+                                <td>
+                                    <input type="text" name="desc" id="desc1"/>
+                                </td>
+                                <td>
+                                    <select name="cat" id="cat1">
+                                        <option>Meal</option>
+                                        <option>Lodging</option>
+                                        <option>Transportation</option>
+                                        <option>Other</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="number" name="amt" id="amt1"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" name="date" placeholder="mm/dd/yy" id="date2"/>
+                                </td>
+                                <td>
+                                    <input type="text" name="desc" id="desc2"/>
+                                </td>
+                                <td>
+                                    <select name="cat" id="cat2">
+                                        <option>Meal</option>
+                                        <option>Lodging</option>
+                                        <option>Transportation</option>
+                                        <option>Other</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="number" name="amt" id="amt2"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" name="date" placeholder="mm/dd/yy" id="date3"/>
+                                </td>
+                                <td>
+                                    <input type="text" name="desc" id="desc3"/>
+                                </td>
+                                <td>
+                                    <select name="cat" id="cat3">
+                                        <option>Meal</option>
+                                        <option>Lodging</option>
+                                        <option>Transportation</option>
+                                        <option>Other</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="number" name="amt" id="amt3"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" name="date" placeholder="mm/dd/yy" id="date4"/>
+                                </td>
+                                <td>
+                                    <input type="text" name="desc" id="desc4"/>
+                                </td>
+                                <td>
+                                    <select name="cat" id="cat4">
+                                        <option>Meal</option>
+                                        <option>Lodging</option>
+                                        <option>Transportation</option>
+                                        <option>Other</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="number" name="amt" id="amt4"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6) Have you submitted your receipts?</td>
+                    <td colspan="3">
+                        <input type="radio" name="receipts" id="rec1" value="yes"/>Yes
+                        <input type="radio" name="receipts" id="rec2" value="no"/>No
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <button type="button" onclick="submit_expense()">Submit travel expenses</button>
+                        <button type="reset">Reset</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <p>Questions? Contact Debbie Larson in Accounting (ext. 2150).</p>
+    </body>
+</html>
