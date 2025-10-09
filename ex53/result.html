@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>Ex53 - Trương Nguyệt Hà</title>
+    <script>
+      function getUrlVars() {
+        var vars = {};
+        window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+          vars[key] = value;
+        });
+        return vars;
+      }
+
+      function calcResult() {
+        var qty1 = parseFloat(getUrlVars()["qty1"]) || 0;
+        var qty2 = parseFloat(getUrlVars()["qty2"]) || 0;
+        var qty3 = parseFloat(getUrlVars()["qty3"]) || 0;
+
+        var price1 = 19.95, price2 = 29.95, price3 = 39.95;
+
+        var item1 = qty1 * price1;
+        var item2 = qty2 * price2;
+        var item3 = qty3 * price3;
+        var total = item1 + item2 + item3;
+
+        document.getElementById("item1").innerHTML = item1.toFixed(2);
+        document.getElementById("item2").innerHTML = item2.toFixed(2);
+        document.getElementById("item3").innerHTML = item3.toFixed(2);
+        document.getElementById("total").innerHTML = total.toFixed(2);
+      }
+    </script>
+  </head>
+
+  <body onload="calcResult()">
+    <table border="1" cellpadding="5" cellspacing="0">
+      <tr>
+        <th>Part Number</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th>Item total</th>
+      </tr>
+      <tr>
+        <td>C112</td>
+        <td>Mouse</td>
+        <td>19.95</td>
+        <td id="qty1"></td>
+        <td id="item1"></td>
+      </tr>
+      <tr>
+        <td>B124</td>
+        <td>Keyboard US</td>
+        <td>29.95</td>
+        <td id="qty2"></td>
+        <td id="item2"></td>
+      </tr>
+      <tr>
+        <td>U125</td>
+        <td>USB KingMax</td>
+        <td>39.95</td>
+        <td id="qty3"></td>
+        <td id="item3"></td>
+      </tr>
+      <tr>
+        <td colspan="4" align="right">Total:</td>
+        <td id="total"></td>
+      </tr>
+    </table>
+    <script>
+      document.getElementById("qty1").innerHTML = getUrlVars()["qty1"] || 0;
+      document.getElementById("qty2").innerHTML = getUrlVars()["qty2"] || 0;
+      document.getElementById("qty3").innerHTML = getUrlVars()["qty3"] || 0;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Ex52 - Trương Nguyệt Hà</title>
+        <script>
+            function getUrlVars() {
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+                    function (m, key, value) {
+                        vars[key] = value;
+                    });
+                return vars;
+            }
+
+            var full_name = decodeURIComponent(getUrlVars()["full_name"]);
+            var email = decodeURIComponent(getUrlVars()["email"]);
+            var department = decodeURIComponent(getUrlVars()["department"]);
+            var title = decodeURIComponent(getUrlVars()["title"]);
+            var content = decodeURIComponent(getUrlVars()["content"]);
+        </script>
+    </head>
+    <body>
+        <form>
+            <table border="1" cellpadding="5" cellspacing="0">
+                <tr>
+                    <th>Full name:</th>
+                    <td id="full_name"></td>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <td id="email"></td>
+                </tr>
+                <tr>
+                    <th>Send to:</th>
+                    <td id="department"></td>
+                </tr>
+                <tr>
+                    <th>Title:</th>
+                    <td id="title"></td>
+                </tr>
+                <tr>
+                    <th>Content:</th>
+                    <td id="content"></td>
+                </tr>
+            </table>
+        </form>
+
+        <script>
+            document.getElementById("full_name").innerHTML = full_name;
+            document.getElementById("email").innerHTML = email;
+            document.getElementById("department").innerHTML = department;
+            document.getElementById("title").innerHTML = title;
+            document.getElementById("content").innerHTML = content;
+        </script>
+    </body>
+</html>
