@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <title>Ex55 - Trương Nguyệt Hà</title>
+    <script>
+        function solve_quadratic() {
+            a = parseFloat(myform.a_value.value)
+            b = parseFloat(myform.b_value.value)
+            c = parseFloat(myform.c_value.value)
+
+            if (isNaN(a) || isNaN(b) || isNaN(c)) {
+                alert("Please enter all coefficients (a, b, c).")
+                return
+            }
+
+            if (a == 0) {
+                if (b == 0) {
+                    if (c == 0)
+                        myform.result.value = "Infinite solutions"
+                    else
+                        myform.result.value = "No solution"
+                } else {
+                    x = -c / b
+                    myform.result.value = "Linear: x = " + x
+                }
+            }
+            else {
+                delta = b * b - 4 * a * c
+                if (delta < 0) {
+                    myform.result.value = "No real roots"
+                }
+                else if (delta == 0) {
+                    x = -b / (2 * a)
+                    myform.result.value = "Double root: x1 = x2 = " + x
+                }
+                else {
+                    x1 = (-b + Math.sqrt(delta)) / (2 * a)
+                    x2 = (-b - Math.sqrt(delta)) / (2 * a)
+                    myform.result.value = "x1 = " + x1 + " ; x2 = " + x2
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid #999;
+            padding: 8px;
+        }
+
+        input[type="text"] {
+            width: 150px;
+            text-align: center;
+        }
+
+        button {
+            margin: 5px;
+            padding: 5px 15px;
+            border: 1px solid #d4a017;
+            border-radius: 4px;
+            background-color: #fff8dc;
+        }
+
+        .header {
+            background-color: #e3eed4;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="myform">
+        <table>
+            <tr class="header">
+                <td colspan="2">The quadratic equation</td>
+            </tr>
+            <tr>
+                <td>a:</td>
+                <td><input type="text" name="a_value" id="a_value"></td>
+            </tr>
+            <tr>
+                <td>b:</td>
+                <td><input type="text" name="b_value" id="b_value"></td>
+            </tr>
+            <tr>
+                <td>c:</td>
+                <td><input type="text" name="c_value" id="c_value"></td>
+            </tr>
+            <tr>
+                <td>Result:</td>
+                <td><input type="text" name="result" id="result" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="button" onclick="solve_quadratic()">Find solution</button>
+                    <button type="reset">Clear</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

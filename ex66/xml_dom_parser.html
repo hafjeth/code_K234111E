@@ -1,0 +1,89 @@
+<html>
+<head>
+    <title>Ex66 - Trương Nguyệt Hà</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 40px;
+        }
+        table {
+            border-collapse: collapse;
+            margin: auto;
+            width: 400px;
+        }
+        th {
+            background-color: #cfe3c2;
+            padding: 8px;
+            font-size: 18px;
+        }
+        td {
+            border: 1px solid black;
+            padding: 6px 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<table border="1">
+    <tr>
+        <th colspan="2">Student Information</th>
+    </tr>
+    <tr>
+        <td>Student ID:</td>
+        <td id="td_id"></td>
+    </tr>
+    <tr>
+        <td>Student Name:</td>
+        <td id="td_name"></td>
+    </tr>
+    <tr>
+        <td>Birthday:</td>
+        <td id="td_birthday"></td>
+    </tr>
+    <tr>
+        <td>Gender:</td>
+        <td id="td_gender"></td>
+    </tr>
+</table>
+
+<script type="text/javascript">
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "datasets/student.xml", true);
+    xhr.send();
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var xmlText = xhr.responseText;
+
+            var parser = new DOMParser();
+            var xmlDoc = parser.parseFromString(xmlText, "text/xml");
+
+            var id = xmlDoc.getElementsByTagName("id")[0].childNodes[0].nodeValue;
+            var name = xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+            var birthday = xmlDoc.getElementsByTagName("birthday")[0].childNodes[0].nodeValue;
+            var gender = xmlDoc.getElementsByTagName("gender")[0].childNodes[0].nodeValue;
+
+            td_id.innerText = id;
+            td_name.innerText = name;
+            td_birthday.innerText = birthday;
+            td_gender.innerText = gender;
+
+            var rows = document.querySelectorAll("table tr");
+            for (var i = 1; i < rows.length; i++) {
+                rows[i].onmouseover = function() {
+                    this.style.backgroundColor = "blue";
+                    this.style.color = "white";
+                };
+                rows[i].onmouseout = function() {
+                    this.style.backgroundColor = "white";
+                    this.style.color = "black";
+                };
+            }
+        }
+    };
+</script>
+
+</body>
+</html>

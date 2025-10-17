@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <title>E54 - Trương Nguyệt Hà</title>
+    <script>
+        function calc_max() {
+            a = parseFloat(myform.a_value.value)
+            b = parseFloat(myform.b_value.value)
+            c = parseFloat(myform.c_value.value)
+            if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
+                myform.result.value = Math.max(a, b, c)
+            }
+        }
+
+        function calc_min() {
+            a = parseFloat(myform.a_value.value)
+            b = parseFloat(myform.b_value.value)
+            c = parseFloat(myform.c_value.value)
+            if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
+                myform.result.value = Math.min(a, b, c)
+            }
+        }
+
+        function calc_sin() {
+            a = parseFloat(myform.a_value.value)
+            if (!isNaN(a)) {
+                rad = a * Math.PI / 180
+                myform.result.value = Math.sin(rad)
+            }
+        }
+
+        function calc_cos() {
+            a = parseFloat(myform.a_value.value)
+            if (!isNaN(a)) {
+                rad = a * Math.PI / 180
+                myform.result.value = Math.cos(rad)
+            }
+        }
+
+        function calc_power() {
+            a = parseFloat(myform.a_value.value)
+            b = parseFloat(myform.b_value.value)
+            if (!isNaN(a) && !isNaN(b)) {
+                myform.result.value = Math.pow(a, b)
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myform">
+        <table border="1" cellpadding="5">
+            <tr>
+                <td>a:</td>
+                <td><input type="text" name="a_value" id="a_value"></td>
+            </tr>
+            <tr>
+                <td>b:</td>
+                <td><input type="text" name="b_value" id="b_value"></td>
+            </tr>
+            <tr>
+                <td>c:</td>
+                <td><input type="text" name="c_value" id="c_value"></td>
+            </tr>
+            <tr>
+                <td>Result:</td>
+                <td><input type="text" name="result" id="result" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="button" onclick="calc_max()">MAX</button>
+                    <button type="button" onclick="calc_min()">MIN</button>
+                    <button type="button" onclick="calc_sin()">sin(a)</button>
+                    <button type="button" onclick="calc_cos()">cos(a)</button>
+                    <button type="button" onclick="calc_power()">a^b</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
