@@ -8,7 +8,7 @@ describe('Listcustomer', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Listcustomer]
+      declarations: [Listcustomer]
     })
     .compileComponents();
 

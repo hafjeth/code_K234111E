@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-about',
-  imports: [],
+  standalone: false,
   templateUrl: './about.html',
   styleUrl: './about.css',
 })
 export class About {
-  student_id:string="SV123"
-  student_name:string="Nguyen Thi Long Lanh"
-  student_email:string="longlanh@gmail.com"
-  my_uni_logo="uel-logo-cap-nhat-09-4-40.jpg"
+  student_id: string = "K234111387";
+  student_name: string = "Nguyen Thi Thu Diep";
+  student_uni:string ="University of Economic and Laws"
+  student_email: string = "diepntt234111e@st.uel.edu.vn";
+  my_img = "assets/thudiep.jpg";
 }

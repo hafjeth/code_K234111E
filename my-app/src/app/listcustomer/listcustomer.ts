@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-listcustomer',
-  imports: [CommonModule],
+  standalone: false,
   templateUrl: './listcustomer.html',
   styleUrl: './listcustomer.css',
 })
 export class Listcustomer {
-  customers = [
-    { "id": "c1", "name": "Putin", "age": 72, "picture": "putin.jpg" },
-    { "id": "c2", "name": "Trump", "age": 61, "picture": "trump.png" },
-    { "id": "c3", "name": "Obama", "age": 61, "picture": "obama.png" },
-    { "id": "c4", "name": "Biden", "age": 79, "picture": "biden.png" },
-  ]
+  customers=[
+      {"id":"c1", "name":"D.O.","age":33,"picture":"EXO/do.jpg"},
+      {"id":"c2", "name":"Kai","age":32,"picture":"EXO/kai.jpg"},
+      {"id":"c3", "name":"Sehun","age":32,"picture":"EXO/sehun.jpg"},
+      {"id":"c4", "name":"Suho","age":35,"picture":"EXO/suho.jpg"},
+      {"id":"c5", "name":"Chanyeol","age":34,"picture":"EXO/pcy.jpg"},
+    ]
+
 }

@@ -8,7 +8,7 @@ describe('Learnbinding', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Learnbinding]
+      declarations: [Learnbinding]
     })
     .compileComponents();
 

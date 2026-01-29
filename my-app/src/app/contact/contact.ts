@@ -2,16 +2,16 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
-  imports: [],
+  standalone: false,
   templateUrl: './contact.html',
   styleUrl: './contact.css',
 })
 export class Contact {
-  sendContact():void 
+  sendContact(): void
   {
-    const input_name = document.getElementById("name") as HTMLInputElement
-    const input_email = document.getElementById("email") as HTMLInputElement
-    const tdphanhoi = document.getElementById("tdphanhoi")
-    alert("Contact form submitted! + ["+input_name.value+"]");
+    const input_name=document.getElementById("name") as HTMLInputElement
+    const input_email=document.getElementById("email") as HTMLInputElement
+    const tdphanhoi=document.getElementById("tdphanhoi")
+    alert("Tôi đã nhận được lời thỉnh cầu của bạn["+input_name.value+"]")
   }
 }

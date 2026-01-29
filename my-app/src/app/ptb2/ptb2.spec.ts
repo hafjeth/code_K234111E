@@ -8,7 +8,7 @@ describe('Ptb2', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Ptb2]
+      declarations: [Ptb2]
     })
     .compileComponents();
 
