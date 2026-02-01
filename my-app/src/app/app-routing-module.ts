@@ -7,12 +7,11 @@ import { Listcustomer3 } from './listcustomer3/listcustomer3';
 import { Listproduct } from './listproduct/listproduct';
 import { Productdetail } from './productdetail/productdetail';
 import { Notfound } from './notfound/notfound';
-import { FakeProduct } from './fake-product/fake-product';
 import { EX13 } from './ex13/ex13';
-import { EX14 } from './ex14/ex14';
+import { CatalogService } from './catalog-service/catalog-service';
 import { EX18 } from './ex18/ex18';
 import { Ex19 } from './ex19/ex19';
-import { EX10 } from './ex10/ex10';
+import { Ex10 } from './ex10/ex10';
 import { ServiceProductImageEventDetail } from './service-product-image-event-detail/service-product-image-event-detail';
 import { Product } from './product/product';
 import { ListProduct } from './list-product/list-product';
@@ -20,6 +19,9 @@ import { ServiceProduct } from './service-product/service-product';
 import { Form } from './form/form';
 import { Reactiveform } from './reactiveform/reactiveform';
 import { Books } from './books/books';
+import { Ex27 } from './ex27/ex27';
+import { Ex28 } from './ex28/ex28';
+import { EX26 } from './ex26/ex26';
 
 
 const routes: Routes = [
@@ -29,10 +31,10 @@ const routes: Routes = [
   {path:"khach-hang-3",component:Listcustomer3},
   {path:"san-pham-1",component:Listproduct},
   {path:"san-pham-1/:id",component:Productdetail},
-  {path:"ex10",component:EX10},
+  {path:"ex10",component:Ex10},
   {path:"ex13",component:EX13},
   {path:'ex13/:id', component:ServiceProductImageEventDetail}, 
-  {path:"ex14",component:EX14},
+  {path:"catalog-service",component:CatalogService},
   {path:"ex18",component:EX18},
   {
     path:"ex19",
@@ -43,7 +45,9 @@ const routes: Routes = [
       { path: 'service-product', component: ServiceProduct }
     ]
   },
-  {path:"ex26",component:FakeProduct},
+  {path:"ex26",component:EX26},
+  {path:"ex27",component:Ex27},
+  {path:"ex28",component:Ex28},
   {path:"form",component:Form},
   {path:"Reactiveform",component: Reactiveform},
   {path:"ex39",component: Books},

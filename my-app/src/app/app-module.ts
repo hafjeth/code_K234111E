@@ -21,8 +21,6 @@ import { FakeProduct } from './fake-product/fake-product';
 import { HttpClientModule } from '@angular/common/http';
 import { EX18 } from './ex18/ex18';
 import { EX13 } from './ex13/ex13';
-import { EX14 } from './ex14/ex14';
-import { EX10 } from './ex10/ex10';
 import { EX26 } from './ex26/ex26';
 import { Ex27 } from './ex27/ex27';
 import { Ex19 } from './ex19/ex19';
@@ -53,9 +51,7 @@ import { Books } from './books/books';
     Productdetail,
     FakeProduct,
     EX13,
-    EX14,
     EX18,
-    EX10,
     EX26,
     Ex27,
     Ex19,

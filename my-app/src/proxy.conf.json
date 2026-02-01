@@ -1,0 +1,16 @@
+[
+    {
+        "context": ["/products"],
+        "target": "https://fakestoreapi.com",
+        "secure": false,
+        "changeOrigin":true,
+        "logLevel":"debug"
+    },
+    {
+        "context": ["/api"],
+        "target": "https://api.coingecko.com",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+]
