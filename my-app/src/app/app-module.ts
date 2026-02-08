@@ -32,6 +32,10 @@ import { Ex28 } from './ex28/ex28';
 import { Form } from './form/form';
 import { Reactiveform } from './reactiveform/reactiveform';
 import { Books } from './books/books';
+import { FileUpload } from './file-upload/file-upload';
+import { BookList } from './ex50/book-list/book-list';
+import { BookForm } from './ex50/book-form/book-form';
+import { BookDetail } from './ex50/book-detail/book-detail';
 
 @NgModule({
   declarations: [
@@ -64,6 +68,9 @@ import { Books } from './books/books';
     Form,
     Reactiveform,
     Books,
+    BookList,
+    BookForm,
+    BookDetail
     
   ],
   imports: [

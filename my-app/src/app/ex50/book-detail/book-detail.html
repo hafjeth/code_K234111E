@@ -1,0 +1,31 @@
+<div class="container mt-4">
+  <div class="card" *ngIf="book; else loading">
+    <div class="card-header bg-info text-white">
+      CHI TIẾT SÁCH
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <img [src]="'http://localhost:3001/upload/' + book.Anhbia" class="img-fluid rounded" style="max-height: 300px;">
+        </div>
+        <div class="col-md-8">
+          <h3 class="text-primary">{{book.Tensach}}</h3>
+          <p><strong>Mã sách:</strong> {{book.id}}</p>
+          <p><strong>Giá bán: </strong> <span class="text-danger fw-bold">{{book.Giaban | number}} đ</span></p>
+          <p><strong>Mã Chủ đề:</strong> {{book.MaCD}}</p>
+          <p><strong>Mã NXB:</strong> {{book.MaNXB}}</p>
+          <p><strong>Tồn kho:</strong> {{book.Soluongton}}</p>
+          <p><strong>Ngày cập nhật:</strong> {{book.Ngaycapnhat | date:'dd/MM/yyyy'}}</p>
+          <p><strong>Mô tả:</strong> {{book.Mota}}</p>
+          <a routerLink="/ex50" class="btn btn-secondary mt-3">Quay lại danh sách</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #loading>
+    <div class="alert alert-warning text-center">
+      Đang tải dữ liệu sách... (Nếu quá lâu hãy kiểm tra lại Server)
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,56 @@
+<div class="container mt-4">
+  <h3 class="text-primary">{{ isEditMode ? 'CẬP NHẬT SÁCH' : 'THÊM SÁCH MỚI' }}</h3>
+  
+  <form (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label>Tên Sách:</label>
+        <input type="text" class="form-control" [(ngModel)]="book.Tensach" name="Tensach" required>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label>Giá bán:</label>
+        <input type="number" class="form-control" [(ngModel)]="book.Giaban" name="Giaban" required>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label>Mã Chủ Đề:</label>
+        <input type="number" class="form-control" [(ngModel)]="book.MaCD" name="MaCD" required>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label>Mã NXB:</label>
+        <input type="number" class="form-control" [(ngModel)]="book.MaNXB" name="MaNXB" required>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label>Ngày cập nhật:</label>
+        <input type="date" class="form-control" [(ngModel)]="book.Ngaycapnhat" name="Ngaycapnhat">
+      </div>
+      <div class="col-md-6 mb-3">
+        <label>Số lượng tồn:</label>
+        <input type="number" class="form-control" [(ngModel)]="book.Soluongton" name="Soluongton">
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label>Mô tả:</label>
+      <textarea class="form-control" rows="3" [(ngModel)]="book.Mota" name="Mota"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label>Ảnh bìa:</label>
+      <input type="file" class="form-control" (change)="onFileSelected($event)">
+      
+      <div *ngIf="isEditMode && book.Anhbia" class="mt-2">
+        <p class="fw-bold">Ảnh hiện tại:</p>
+        <img [src]="'http://localhost:3001/upload/' + book.Anhbia" height="80" style="border: 1px solid #ddd; padding: 5px;">
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">{{ isEditMode ? 'Cập nhật' : 'Lưu lại' }}</button>
+    <a routerLink="/ex50" class="btn btn-secondary ms-2">Hủy</a>
+  </form>
+</div>

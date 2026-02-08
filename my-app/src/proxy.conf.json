@@ -1,15 +1,46 @@
 [
     {
-        "context": ["/products"],
+        "context": [
+            "/products"
+        ],
         "target": "https://fakestoreapi.com",
         "secure": false,
-        "changeOrigin":true,
-        "logLevel":"debug"
+        "changeOrigin": true,
+        "logLevel": "debug"
     },
     {
-        "context": ["/api"],
+        "context": [
+            "/api"
+        ],
         "target": "https://api.coingecko.com",
         "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    {
+        "context": [
+            "/exchange"
+        ],
+        "target": "https://www.dongabank.com.vn",
+        "secure": true,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    {
+        "context": [
+            "/books"
+        ],
+        "target": "http://localhost:3000",
+        "secure": true,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    {
+        "context": [
+            "/upload"
+        ],
+        "target": "http://localhost:3001",
+        "secure": true,
         "changeOrigin": true,
         "logLevel": "debug"
     }

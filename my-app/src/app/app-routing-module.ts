@@ -22,6 +22,10 @@ import { Books } from './books/books';
 import { Ex27 } from './ex27/ex27';
 import { Ex28 } from './ex28/ex28';
 import { EX26 } from './ex26/ex26';
+import { FileUpload } from './file-upload/file-upload';
+import { BookList } from './ex50/book-list/book-list';
+import { BookForm } from './ex50/book-form/book-form';
+import { BookDetail } from './ex50/book-detail/book-detail';
 
 
 const routes: Routes = [
@@ -51,6 +55,11 @@ const routes: Routes = [
   {path:"form",component:Form},
   {path:"Reactiveform",component: Reactiveform},
   {path:"ex39",component: Books},
+  {path:"file-upload",component: FileUpload},
+  { path: 'ex50', component: BookList },
+  { path: 'ex50/create', component: BookForm },
+  { path: 'ex50/details/:id', component: BookDetail },
+  { path: 'ex50/edit/:id', component: BookForm },
   {path:"**",component:Notfound}
 ];
 

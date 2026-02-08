@@ -1,0 +1,44 @@
+<div class="container mt-4">
+  <h2 class="text-primary text-uppercase">QUẢN LÝ THÔNG TIN SÁCH</h2>
+  
+  <a routerLink="/ex50/create" class="btn btn-link">Create New</a>
+
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr class="bg-light">
+        <th>Tensach</th>
+        <th>Giaban</th>
+        <th>Mota</th>
+        <th>Anhbia</th>
+        <th>Ngaycapnhat</th>
+        <th>Soluongton</th>
+        <th>MaCD</th>
+        <th>MaNXB</th>
+        <th>Chức năng</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let b of books">
+        <td>{{b.Tensach}}</td>
+        <td>{{b.Giaban}}</td>
+        <td>{{b.Mota}}</td>
+        <td class="text-center">
+          <img [src]="'http://localhost:3001/upload/' + b.Anhbia" 
+               style="width: 50px; height: auto; object-fit: cover;" 
+               alt="Ảnh bìa">
+        </td>
+        <td>{{b.Ngaycapnhat | date:'dd/MM/yyyy'}}</td>
+        <td>{{b.Soluongton}}</td>
+        
+        <td>{{b.MaCD}}</td>
+        <td>{{b.MaNXB}}</td>
+        
+        <td>
+          <a [routerLink]="['/ex50/edit', b.id]">Edit</a> | 
+          <a [routerLink]="['/ex50/details', b.id]">Details</a> | 
+          <a class="text-danger" style="cursor: pointer;" (click)="handleDelete(b.id)">Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
