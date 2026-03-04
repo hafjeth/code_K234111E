@@ -36,6 +36,10 @@ import { FileUpload } from './file-upload/file-upload';
 import { BookList } from './ex50/book-list/book-list';
 import { BookForm } from './ex50/book-form/book-form';
 import { BookDetail } from './ex50/book-detail/book-detail';
+import { Fashion } from './fashion/fashion';
+import { Momo } from './momo/momo';
+import { PaymentResult } from './payment-result/payment-result';
+import { ProductMomo } from './product-momo/product-momo';
 
 @NgModule({
   declarations: [
@@ -70,8 +74,11 @@ import { BookDetail } from './ex50/book-detail/book-detail';
     Books,
     BookList,
     BookForm,
-    BookDetail
-    
+    BookDetail,
+    Fashion,
+    Momo,
+    PaymentResult,
+    ProductMomo
   ],
   imports: [
     BrowserModule,

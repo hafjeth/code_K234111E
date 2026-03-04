@@ -1,0 +1,32 @@
+<p>payment-result works!</p>
+    <div class="result-page">
+      <div class="result-card" [class.success]="isSuccess" [class.fail]="!isSuccess">
+
+        <div class="icon">{{ isSuccess ? '✅' : '❌' }}</div>
+
+        <h2>{{ isSuccess ? 'Thanh toán thành công!' : 'Thanh toán thất bại' }}</h2>
+
+        <div class="info-box" *ngIf="resultData">
+          <div class="info-row">
+            <span>Mã đơn hàng</span>
+            <strong>{{ resultData.orderId }}</strong>
+          </div>
+          <div class="info-row">
+            <span>Số tiền</span>
+            <strong>{{ formatAmount(resultData.amount) }}</strong>
+          </div>
+          <div class="info-row">
+            <span>Nội dung</span>
+            <strong>{{ resultData.orderInfo }}</strong>
+          </div>
+          <div class="info-row">
+            <span>Trạng thái</span>
+            <strong [style.color]="isSuccess ? '#2e7d32' : '#c62828'">
+              {{ resultData.message }}
+            </strong>
+          </div>
+        </div>
+
+        <a href="/" class="back-btn">← Quay về trang chủ</a>
+      </div>
+    </div>

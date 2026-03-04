@@ -1,0 +1,195 @@
+/* File: src/app/momo/momo.component.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.momo-container {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 0 16px 40px;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 32px 0 24px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+}
+.logo-icon { font-size: 32px; }
+.highlight { color: #ae2070; }
+.subtitle { color: #666; font-size: 14px; }
+
+/* SECTIONS */
+.section { margin-bottom: 24px; }
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 14px;
+}
+
+/* PRODUCT GRID */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+@media (min-width: 480px) {
+  .product-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.product-card {
+  position: relative;
+  background: #fff;
+  border: 2px solid #eee;
+  border-radius: 14px;
+  padding: 16px 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.product-card:hover {
+  border-color: #ae2070;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(174,32,112,0.12);
+}
+.product-card.selected {
+  border-color: #ae2070;
+  background: #fdf0f6;
+}
+.product-icon { font-size: 28px; margin-bottom: 8px; }
+.product-name { font-size: 12px; color: #444; font-weight: 500; margin-bottom: 4px; }
+.product-price { font-size: 13px; color: #ae2070; font-weight: 600; }
+.check-icon {
+  position: absolute;
+  top: 8px; right: 8px;
+  background: #ae2070;
+  color: white;
+  border-radius: 50%;
+  width: 20px; height: 20px;
+  font-size: 11px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* FORM CARD */
+.form-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+}
+.form-group { margin-bottom: 18px; }
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+}
+.form-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  transition: border 0.2s;
+}
+.form-input:focus { border-color: #ae2070; }
+.amount-display {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #ae2070;
+  font-weight: 600;
+}
+
+/* ERROR */
+.error-msg {
+  background: #fff3f3;
+  color: #d32f2f;
+  border: 1px solid #ffcdd2;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+/* PAY BUTTON */
+.pay-btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #ae2070 0%, #d63a8c 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 15px rgba(174,32,112,0.35);
+}
+.pay-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(174,32,112,0.45);
+}
+.pay-btn:disabled { opacity: 0.65; cursor: not-allowed; }
+.momo-logo { width: 24px; height: 24px; border-radius: 4px; }
+.loading { animation: pulse 1s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
+
+.secure-note {
+  text-align: center;
+  font-size: 11px;
+  color: #999;
+  margin-top: 12px;
+}
+
+/* TEST GUIDE */
+.test-guide {
+  background: linear-gradient(135deg, #e8f5e9, #f3e5f5);
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-top: 8px;
+}
+.test-guide h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 14px;
+}
+.guide-steps { display: flex; flex-direction: column; gap: 10px; }
+.step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: #444;
+}
+.step-num {
+  background: #ae2070;
+  color: white;
+  border-radius: 50%;
+  width: 22px; height: 22px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}

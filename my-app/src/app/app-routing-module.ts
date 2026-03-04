@@ -26,6 +26,9 @@ import { FileUpload } from './file-upload/file-upload';
 import { BookList } from './ex50/book-list/book-list';
 import { BookForm } from './ex50/book-form/book-form';
 import { BookDetail } from './ex50/book-detail/book-detail';
+import { Fashion } from './fashion/fashion';
+import { Momo } from './momo/momo';
+import { PaymentResult } from './payment-result/payment-result';
 
 
 const routes: Routes = [
@@ -60,6 +63,9 @@ const routes: Routes = [
   { path: 'ex50/create', component: BookForm },
   { path: 'ex50/details/:id', component: BookDetail },
   { path: 'ex50/edit/:id', component: BookForm },
+  {path:"ex53",component: Fashion},
+  {path:"momo", component: Momo},
+  { path: 'payment-result', component: PaymentResult },
   {path:"**",component:Notfound}
 ];
 
