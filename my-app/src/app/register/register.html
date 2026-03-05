@@ -1,0 +1,15 @@
+<div class="full-screen-container">
+  <div class="auth-box">
+    <h2>Đăng ký tài khoản</h2>
+    <div class="input-group">
+      <label>Tên đăng nhập mới:</label>
+      <input type="text" [(ngModel)]="user.name">
+    </div>
+    <div class="input-group">
+      <label>Mật khẩu mới:</label>
+      <input type="password" [(ngModel)]="user.password">
+    </div>
+    <button (click)="onRegister()">Register</button>
+    <p class="message" *ngIf="message">{{message}}</p>
+  </div>
+</div>

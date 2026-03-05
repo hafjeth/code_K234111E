@@ -9,9 +9,10 @@ import { FashionApiService } from '../myservices/fashion-api-service';
 })
 export class Fashion {
   fashions:any;
-  errMessage:string=''
+  errMessage:string='';
+  fashionId: string = '';
   constructor(public _service: FashionApiService){
-  this._service.getFashions().subscribe({
+  this._service.getFashion(this.fashionId).subscribe({
   next:(data)=>{this.fashions=data},
   error:(err)=>{this.errMessage=err}
   })

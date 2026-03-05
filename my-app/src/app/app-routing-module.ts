@@ -29,6 +29,11 @@ import { BookDetail } from './ex50/book-detail/book-detail';
 import { Fashion } from './fashion/fashion';
 import { Momo } from './momo/momo';
 import { PaymentResult } from './payment-result/payment-result';
+import { FashionDetail } from './fashion-detail/fashion-detail';
+import { Login } from './login/login';
+import { Register } from './register/register';
+import { ProductStore } from './product-store/product-store';
+import { ShoppingCart } from './shopping-cart/shopping-cart';
 
 
 const routes: Routes = [
@@ -66,6 +71,11 @@ const routes: Routes = [
   {path:"ex53",component: Fashion},
   {path:"momo", component: Momo},
   { path: 'payment-result', component: PaymentResult },
+  {path:"ex54/:id",component: FashionDetail},
+  {path:"login",component: Login},
+  {path:"register",component: Register},
+  { path: 'product-store', component: ProductStore },
+  { path: 'shopping-cart', component: ShoppingCart },
   {path:"**",component:Notfound}
 ];
 

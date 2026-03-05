@@ -40,6 +40,11 @@ import { Fashion } from './fashion/fashion';
 import { Momo } from './momo/momo';
 import { PaymentResult } from './payment-result/payment-result';
 import { ProductMomo } from './product-momo/product-momo';
+import { FashionDetail } from './fashion-detail/fashion-detail';
+import { Login } from './login/login';
+import { Register } from './register/register';
+import { ProductStore } from './product-store/product-store';
+import { ShoppingCart } from './shopping-cart/shopping-cart';
 
 @NgModule({
   declarations: [
@@ -78,7 +83,12 @@ import { ProductMomo } from './product-momo/product-momo';
     Fashion,
     Momo,
     PaymentResult,
-    ProductMomo
+    ProductMomo,
+    FashionDetail,
+    Login,
+    Register,
+    ProductStore,
+    ShoppingCart
   ],
   imports: [
     BrowserModule,
