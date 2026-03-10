@@ -1,5 +1,6 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AngularEditorModule } from '@kolkov/angular-editor';
 
 import { AppRoutingModule, RoutingComponent } from './app-routing-module';
 import { App } from './app';
@@ -45,6 +46,10 @@ import { Login } from './login/login';
 import { Register } from './register/register';
 import { ProductStore } from './product-store/product-store';
 import { ShoppingCart } from './shopping-cart/shopping-cart';
+import { AdminFashion } from './ex58/admin-fashion/admin-fashion';
+import { AdminFashionDetail } from './ex58/admin-fashion-detail/admin-fashion-detail';
+import { ClientFashion } from './ex58/client-fashion/client-fashion';
+import { ClientFashionDetail } from './ex58/client-fashion-detail/client-fashion-detail';
 
 @NgModule({
   declarations: [
@@ -88,14 +93,19 @@ import { ShoppingCart } from './shopping-cart/shopping-cart';
     Login,
     Register,
     ProductStore,
-    ShoppingCart
+    ShoppingCart,
+    AdminFashion,
+    AdminFashionDetail,
+    ClientFashion
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularEditorModule,
+    ClientFashionDetail
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

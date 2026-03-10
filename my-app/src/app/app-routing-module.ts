@@ -34,6 +34,10 @@ import { Login } from './login/login';
 import { Register } from './register/register';
 import { ProductStore } from './product-store/product-store';
 import { ShoppingCart } from './shopping-cart/shopping-cart';
+import { AdminFashion } from './ex58/admin-fashion/admin-fashion';
+import { AdminFashionDetail } from './ex58/admin-fashion-detail/admin-fashion-detail';
+import { ClientFashion } from './ex58/client-fashion/client-fashion';
+import { ClientFashionDetail } from './ex58/client-fashion-detail/client-fashion-detail';
 
 
 const routes: Routes = [
@@ -76,6 +80,11 @@ const routes: Routes = [
   {path:"register",component: Register},
   { path: 'product-store', component: ProductStore },
   { path: 'shopping-cart', component: ShoppingCart },
+  { path: 'ex58-admin', component: AdminFashion },
+  { path: 'ex58-admin-add', component: AdminFashionDetail },
+  { path: 'ex58-admin-edit/:id', component: AdminFashionDetail },
+  { path: 'ex58-client', component: ClientFashion },
+  { path: 'ex58-client-detail/:id', component: ClientFashionDetail },
   {path:"**",component:Notfound}
 ];
 
