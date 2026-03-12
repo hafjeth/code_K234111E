@@ -1,0 +1,58 @@
+<div class="container-fluid p-4">
+  <div class="row mb-4 align-items-end g-3">
+    <div class="col-md-3">
+      <h2 class="purple-title fw-bold">Collections</h2>
+    </div>
+
+    <div class="col-md-3">
+      <label class="small fw-bold">Search Name/Model/Brand</label>
+      <input type="text" class="form-control rounded-pill border-0 shadow-sm" 
+             [(ngModel)]="searchText" placeholder="Search anything...">
+    </div>
+    
+    <div class="col-md-2">
+      <label class="small fw-bold">Category</label>
+      <select class="form-select rounded-pill border-0 shadow-sm" [(ngModel)]="selectedCat">
+        <option value="">All Categories</option>
+        <option *ngFor="let c of categories" [value]="c._id">{{c.name}}</option>
+      </select>
+    </div>
+
+    <div class="col-md-4">
+      <label class="small fw-bold">Price Range</label>
+      <div class="d-flex gap-2">
+        <input type="number" class="form-control rounded-pill border-0 shadow-sm" [(ngModel)]="minPrice" placeholder="Min $">
+        <input type="number" class="form-control rounded-pill border-0 shadow-sm" [(ngModel)]="maxPrice" placeholder="Max $">
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let p of filteredProducts">
+      <div class="card h-100 border-0 shadow-sm product-card">
+        <div class="text-center p-3">
+          <img [src]="p.image" class="img-fluid rounded-3" style="max-height: 150px; object-fit: contain;">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="fw-bold">{{p.name}}</h5>
+          <p class="text-muted small mb-1">{{p.model}} • {{p.made_by}}</p>
+          <h4 class="price-text mb-3">${{p.price}}</h4>
+          
+          <div class="input-group mb-3 rounded-pill overflow-hidden shadow-sm">
+            <span class="input-group-text border-0 bg-white small">Qty:</span>
+            <input type="number" #q value="1" class="form-control border-0 text-center">
+          </div>
+
+          <div class="d-grid gap-2">
+            <button class="btn btn-outline-mickey fw-bold" (click)="handlePurchase(p, q.value, false)">
+              ADD TO CART
+            </button>
+            <button class="btn btn-mickey fw-bold" (click)="handlePurchase(p, q.value, true)">
+              BUY NOW
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

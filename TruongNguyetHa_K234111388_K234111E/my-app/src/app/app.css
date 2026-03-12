@@ -1,0 +1,41 @@
+/* app.css */
+.mickey-container {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "main side"
+    "footer side"; /* Kéo dài side (Part A) xuống cả footer nếu muốn */
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: 70px 1fr 50px;
+  height: 100vh;
+}
+
+.part-c { grid-area: header; background: #7E57C2; }
+.part-d { grid-area: main; background: #ffffff; overflow-y: auto; }
+.part-a { grid-area: side; background: #F3E5F5; border-left: 2px solid #D1C4E9; position: relative; }
+.part-b { grid-area: footer; background: #B39DDB; color: white; display: flex; align-items: center; justify-content: center; border-top: 1px solid #D1C4E9; }
+
+.purple-title { color: #4A148C; border-left: 5px solid #D1C4E9; padding-left: 10px; }
+.price-text { color: #7E57C2; font-weight: bold; }
+
+.btn-mickey {
+  background-color: #D1C4E9;
+  color: #4A148C;
+  border-radius: 25px;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-mickey:hover {
+  background-color: #7E57C2;
+  color: white;
+}
+
+.user-name-btn {
+  color: #FFEB3B;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.user-name-btn:hover { color: white; }

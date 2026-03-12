@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-dark px-4 purple-nav">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" routerLink="/products">MICKEY Store</a>
+    
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products">Products</a>
+        </li>
+
+        <li class="nav-item dropdown hover-dropdown">
+          <a class="nav-link dropdown-toggle" href="javascript:void(0)">Order</a>
+          <ul class="dropdown-menu border-0 shadow-sm">
+            <li><a class="dropdown-item" routerLink="/order">Current Order</a></li>
+            
+            <li *ngIf="user?.role === 'Employee'">
+              <hr class="dropdown-divider">
+            </li>
+            <li *ngIf="user?.role === 'Employee'">
+              <a class="dropdown-item" routerLink="/revenue">Revenue statistics</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

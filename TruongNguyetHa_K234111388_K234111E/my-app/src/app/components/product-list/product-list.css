@@ -1,0 +1,24 @@
+.btn-outline-mickey {
+  border: 2px solid #B39DDB;
+  color: #7E57C2;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.btn-outline-mickey:hover {
+  background-color: #F3E5F5;
+  color: #4A148C;
+}
+
+.btn-mickey {
+  background-color: #B39DDB;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-mickey:hover {
+  background-color: #7E57C2;
+  transform: scale(1.02);
+}

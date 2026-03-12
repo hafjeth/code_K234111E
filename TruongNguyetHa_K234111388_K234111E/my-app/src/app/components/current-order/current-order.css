@@ -1,0 +1,37 @@
+/* current-order.css */
+.purple-thead {
+  background-color: #D1C4E9;
+  color: #4A148C;
+}
+
+.text-purple { color: #7E57C2; }
+
+.btn-outline-purple {
+  border-color: #B39DDB;
+  color: #7E57C2;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-outline-purple:hover {
+  background-color: #7E57C2;
+  color: white;
+}
+
+.btn-pay {
+  background-color: #7E57C2;
+  color: white;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn-pay:hover {
+  background-color: #4A148C;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(126, 87, 194, 0.4);
+}

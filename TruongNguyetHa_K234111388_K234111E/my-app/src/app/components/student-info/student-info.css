@@ -1,0 +1,34 @@
+.moving-container {
+  height: 100%;
+  position: relative;
+  background-color: #F3E5F5; /* Tím nhạt Pastel */
+}
+
+/* Q6: Di chuyển lên xuống liên tục */
+@keyframes slideUpDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(300px); } /* Điều chỉnh độ dài tùy màn hình */
+  100% { transform: translateY(0); }
+}
+
+.student-card {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  animation: slideUpDown 6s infinite ease-in-out;
+  text-align: center;
+  border: 2px solid #D1C4E9;
+}
+
+.avatar-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #7E57C2;
+  object-fit: cover;
+}
+
+.text-purple { color: #4A148C; }

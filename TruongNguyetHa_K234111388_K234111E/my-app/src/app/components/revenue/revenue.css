@@ -1,0 +1,19 @@
+.border-purple {
+  border: 1px solid #D1C4E9;
+}
+
+.purple-thead {
+  background-color: #D1C4E9;
+  color: #4A148C;
+}
+
+.revenue-badge {
+  background: linear-gradient(135deg, #7E57C2, #B39DDB);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(126, 87, 194, 0.3);
+}
+
+.text-purple { color: #7E57C2; }

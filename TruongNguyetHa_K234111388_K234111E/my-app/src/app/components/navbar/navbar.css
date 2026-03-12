@@ -1,0 +1,26 @@
+/* navbar.css */
+.purple-nav {
+  background-color: #7E57C2 !important;
+  height: 70px;
+}
+
+/* Hiệu ứng lia chuột (Hover) để hiện menu */
+.hover-dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; 
+  animation: fadeIn 0.3s ease-in;
+}
+
+.dropdown-menu {
+  background-color: #F3E5F5; /* Tím pastel cực nhạt */
+}
+
+.dropdown-item:hover {
+  background-color: #D1C4E9;
+  color: #4A148C;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

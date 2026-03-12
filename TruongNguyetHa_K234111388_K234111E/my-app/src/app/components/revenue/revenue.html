@@ -1,0 +1,48 @@
+<div class="container-fluid p-4">
+  <h2 class="purple-title fw-bold mb-4">Revenue Statistics</h2>
+
+  <div class="card border-0 shadow-sm p-4 mb-4 rounded-4 bg-white">
+    <div class="row g-3 align-items-end">
+      <div class="col-md-3">
+        <label class="form-label small fw-bold">Select Month</label>
+        <select class="form-select rounded-pill border-purple" [(ngModel)]="selectedMonth" (change)="calculate()">
+          <option *ngFor="let m of [1,2,3,4,5,6,7,8,9,10,11,12]" [value]="m">Month {{m}}</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label class="form-label small fw-bold">Select Year</label>
+        <input type="number" class="form-control rounded-pill border-purple" [(ngModel)]="selectedYear" (input)="calculate()">
+      </div>
+      <div class="col-md-6 text-end">
+        <div class="revenue-badge">
+          <small>Total Revenue</small>
+          <h3 class="mb-0 fw-bold">${{totalRevenue | number}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+    <table class="table table-hover align-middle mb-0">
+      <thead class="purple-thead">
+        <tr>
+          <th>Order ID</th>
+          <th>Customer ID</th>
+          <th>Date</th>
+          <th class="text-end">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let o of filteredOrders">
+          <td><span class="badge bg-light text-dark">{{o._id}}</span></td>
+          <td>{{o.customerId}}</td>
+          <td>{{o.orderDate | date:'dd/MM/yyyy HH:mm'}}</td>
+          <td class="text-end fw-bold text-purple">${{o.totalAmount | number}}</td>
+        </tr>
+        <tr *ngIf="filteredOrders.length === 0">
+          <td colspan="4" class="text-center py-4 text-muted">Không có đơn hàng nào trong thời gian này.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

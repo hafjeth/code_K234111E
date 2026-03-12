@@ -1,0 +1,22 @@
+<div class="mickey-container">
+  <header class="part-c">
+    <app-navbar></app-navbar>
+  </header>
+
+  <main class="part-d">
+    <router-outlet></router-outlet>
+  </main>
+
+  <aside class="part-a">
+    <app-student-info></app-student-info>
+  </aside>
+
+  <footer class="part-b">
+    <div *ngIf="user" class="welcome-text">
+      Welcome <span class="user-name-btn" (click)="logout()">{{user.fullName}}</span>
+    </div>
+    <div *ngIf="!user">
+      <a routerLink="/login" class="login-link">Click here to Login</a>
+    </div>
+  </footer>
+</div>

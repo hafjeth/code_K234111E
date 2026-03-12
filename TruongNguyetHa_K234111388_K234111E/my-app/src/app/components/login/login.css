@@ -1,0 +1,26 @@
+.login-container {
+  height: 80vh;
+}
+
+.login-card {
+  background: white;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid #D1C4E9;
+}
+
+.purple-text { color: #7E57C2; }
+
+.btn-mickey {
+  background-color: #B39DDB;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-mickey:hover {
+  background-color: #7E57C2;
+  transform: scale(1.02);
+}
